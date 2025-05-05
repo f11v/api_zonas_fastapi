@@ -1,0 +1,115 @@
+{
+    "info": {
+        "name": "API Zonas Agr\u00edcolas",
+        "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+        "description": "Colecci\u00f3n para probar la API REST de zonas agr\u00edcolas",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Crear zona",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"id\": 1,\n    \"nombre\": \"Regi\u00f3n Norte\",\n    \"cultivo_principal\": \"Caf\u00e9\",\n    \"hectareas\": 120.5,\n    \"coordenadas\": {\n        \"latitud\": -0.25,\n        \"longitud\": -78.52\n    }\n}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/zonas",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "zonas"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Listar zonas",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/zonas",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "zonas"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Obtener zona por ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/zonas/1",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "zonas",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Eliminar zona por ID",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/zonas/1",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "zonas",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Convertir Celsius a Fahrenheit",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/temperatura/convertir?valor=30",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "temperatura",
+                        "convertir"
+                    ],
+                    "query": [
+                        {
+                            "key": "valor",
+                            "value": "30"
+                        }
+                    ]
+                }
+            }
+        }
+        
+    ]
+}
